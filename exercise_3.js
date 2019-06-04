@@ -45,37 +45,39 @@ function isEvenRecursive()
 }
 
 // 3. Bean Counting
-/*Expected Input: A string to have its b values
-Expected Output: a 
-Expected Behavior: */
+/*Expected Input: A string to have its b values counted.
+Expected Output: A number value expressing how many bs are in the given string.
+Expected Behavior: This function searches the string evaluating the 
+frequency that capital B appears in our given string.*/
 function countBs(str) 
 {
 var count = 0;
     for(var i = 0; i < str.length; i++)
     {
-        count = (str.charAt(i) == 'B') ? count++ : count = count;
+        (str.charAt(i) == 'B') ? count++ : null;
     }
 return count;
 }
-/*Expected Input: 
-Expected Behavior:
-Expected Output:
-*/
+/*Expected Input: A string to search and a character to search for.
+Expected Output: a number value of how many times our character appeared
+in the given string.
+Expected Behavior: This function searches the string evaluating the character
+in question with a ternary expression. */
 function countChar(str, chr)
 {
 var count = 0;
     for(var i = 0; i < str.length; i++)
     {
-        count = (str.charAt(i) == chr) ? count = count++ : count = count;
+        (str.charAt(i) == chr) ? count++ : count = count; 
     }
 return count;
 
 }
 
-/*Expected Input: 
-Expected Behavior:
-Expected Output:
-*/
+/*Expected Input: A string to search.
+Expected Output: The number of capital bs in the given string.
+Expected Behavior: This function searches the given string using the
+previously defined countChar function. */
 function countBsTwo(str)
 {
 var myBs = countChar(str, 'B');
